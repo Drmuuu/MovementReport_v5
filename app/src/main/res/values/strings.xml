@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Movement Report</string>
+    <string name="add_duty">Add Duty</string>
+    <string name="add_rest">Add Rest</string>
+    <string name="export_report">Export Report</string>
+    <string name="view_records">View Records</string>
+    <string name="settings">Settings</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+</resources>

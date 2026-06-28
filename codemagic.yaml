@@ -1,0 +1,14 @@
+workflows:
+  android-debug:
+    name: Android Debug Build
+
+    environment:
+      java: 17
+
+    scripts:
+      - perl -pi -e 's/\r\n/\n/g' gradlew
+      - chmod +x gradlew
+      - ./gradlew assembleDebug
+
+    artifacts:
+      - app/build/outputs/apk/debug/*.apk

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary brand -->
+    <color name="primary">#1a237e</color>
+    <color name="primary_variant">#283593</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="primary_container">#C5CAE9</color>
+    <color name="on_primary_container">#000051</color>
+
+    <color name="secondary">#00695C</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="secondary_container">#B2DFDB</color>
+    <color name="on_secondary_container">#00251a</color>
+
+    <color name="surface">#FFFBFE</color>
+    <color name="on_surface">#1C1B1F</color>
+    <color name="surface_variant">#E7E0EC</color>
+    <color name="on_surface_variant">#49454F</color>
+
+    <color name="background">#FFFBFE</color>
+    <color name="on_background">#1C1B1F</color>
+
+    <color name="error">#B3261E</color>
+    <color name="on_error">#FFFFFF</color>
+    <color name="error_color">#B3261E</color>
+    <color name="outline">#79747E</color>
+
+    <!-- Entry type colors -->
+    <color name="duty_bg">#E8F5E9</color>
+    <color name="duty_text">#1B5E20</color>
+    <color name="rest_bg">#E3F2FD</color>
+    <color name="rest_text">#0D47A1</color>
+    <color name="crest_bg">#F3E5F5</color>
+    <color name="crest_text">#4A148C</color>
+    <color name="view_bg">#FFF3E0</color>
+    <color name="view_text">#E65100</color>
+    <color name="export_bg">#FCE4EC</color>
+    <color name="export_text">#880E4F</color>
+
+    <!-- Dark variants -->
+    <color name="primary_dark">#7986CB</color>
+    <color name="surface_dark">#1C1B1F</color>
+    <color name="surface_variant_dark">#49454F</color>
+</resources>

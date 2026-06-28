@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="Movement Report"
+            app:titleTextColor="@android:color/white"
+            app:popupTheme="@style/ThemeOverlay.Material3.Light"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Profile Banner -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="?attr/colorPrimaryContainer"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp"
+                        android:src="@drawable/ic_person"
+                        app:tint="?attr/colorOnPrimaryContainer"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp" android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView android:id="@+id/tvWelcome"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="Welcome"
+                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                            android:textColor="?attr/colorOnPrimaryContainer"/>
+                        <TextView android:id="@+id/tvDesignation"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp" android:text="Designation"
+                            android:textAppearance="?attr/textAppearanceBodySmall"
+                            android:textColor="?attr/colorOnPrimaryContainer"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ═══ SECTION 1: MOVEMENT REPORT ═══ -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="  📋  MOVEMENT REPORT"
+                android:textAppearance="?attr/textAppearanceLabelLarge"
+                android:textColor="?attr/colorPrimary"
+                android:background="?attr/colorPrimaryContainer"
+                android:padding="10dp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <!-- Add Duty -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAddDuty"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" android:clickable="true" android:focusable="true"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="48dp" android:layout_height="48dp"
+                        app:cardBackgroundColor="@color/duty_bg" app:cardCornerRadius="12dp" app:cardElevation="0dp">
+                        <ImageView android:layout_width="26dp" android:layout_height="26dp"
+                            android:layout_gravity="center" android:src="@drawable/ic_train"
+                            app:tint="@color/duty_text"/>
+                    </com.google.android.material.card.MaterialCardView>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="Add Duty" android:textAppearance="?attr/textAppearanceTitleSmall"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="Record a duty trip with train details"
+                            android:textAppearance="?attr/textAppearanceBodySmall"
+                            android:textColor="?attr/colorOnSurfaceVariant"/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                        android:src="@drawable/ic_arrow_forward" app:tint="?attr/colorOnSurfaceVariant"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Add Rest -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAddRest"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" android:clickable="true" android:focusable="true"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="48dp" android:layout_height="48dp"
+                        app:cardBackgroundColor="@color/rest_bg" app:cardCornerRadius="12dp" app:cardElevation="0dp">
+                        <ImageView android:layout_width="26dp" android:layout_height="26dp"
+                            android:layout_gravity="center" android:src="@drawable/ic_rest"
+                            app:tint="@color/rest_text"/>
+                    </com.google.android.material.card.MaterialCardView>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="Add Rest" android:textAppearance="?attr/textAppearanceTitleSmall"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="Record rest day or casual rest"
+                            android:textAppearance="?attr/textAppearanceBodySmall"
+                            android:textColor="?attr/colorOnSurfaceVariant"/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                        android:src="@drawable/ic_arrow_forward" app:tint="?attr/colorOnSurfaceVariant"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- Add Leave -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAddLeave"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" android:clickable="true" android:focusable="true"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="48dp" android:layout_height="48dp"
+                        app:cardBackgroundColor="#FFF8E1" app:cardCornerRadius="12dp" app:cardElevation="0dp">
+                        <TextView android:layout_width="match_parent" android:layout_height="match_parent"
+                            android:gravity="center" android:text="📅" android:textSize="22sp"/>
+                    </com.google.android.material.card.MaterialCardView>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="Add Leave" android:textAppearance="?attr/textAppearanceTitleSmall"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="Casual Leave (CL) or Leave on Average Pay (LAP)"
+                            android:textAppearance="?attr/textAppearanceBodySmall"
+                            android:textColor="?attr/colorOnSurfaceVariant"/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                        android:src="@drawable/ic_arrow_forward" app:tint="?attr/colorOnSurfaceVariant"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- View Records -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewRecords"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" android:clickable="true" android:focusable="true"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="48dp" android:layout_height="48dp"
+                        app:cardBackgroundColor="@color/view_bg" app:cardCornerRadius="12dp" app:cardElevation="0dp">
+                        <ImageView android:layout_width="26dp" android:layout_height="26dp"
+                            android:layout_gravity="center" android:src="@drawable/ic_list"
+                            app:tint="@color/view_text"/>
+                    </com.google.android.material.card.MaterialCardView>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="View Records" android:textAppearance="?attr/textAppearanceTitleSmall"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="Browse, edit and search entries"
+                            android:textAppearance="?attr/textAppearanceBodySmall"
+                            android:textColor="?attr/colorOnSurfaceVariant"/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                        android:src="@drawable/ic_arrow_forward" app:tint="?attr/colorOnSurfaceVariant"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Export Report -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardExport"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp" android:clickable="true" android:focusable="true"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="48dp" android:layout_height="48dp"
+                        app:cardBackgroundColor="@color/export_bg" app:cardCornerRadius="12dp" app:cardElevation="0dp">
+                        <ImageView android:layout_width="26dp" android:layout_height="26dp"
+                            android:layout_gravity="center" android:src="@drawable/ic_pdf"
+                            app:tint="@color/export_text"/>
+                    </com.google.android.material.card.MaterialCardView>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="Export Report" android:textAppearance="?attr/textAppearanceTitleSmall"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="Generate and share monthly PDF"
+                            android:textAppearance="?attr/textAppearanceBodySmall"
+                            android:textColor="?attr/colorOnSurfaceVariant"/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                        android:src="@drawable/ic_arrow_forward" app:tint="?attr/colorOnSurfaceVariant"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ═══ SECTION 2: NIGHT DUTY ALLOWANCE ═══ -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="  🌙  NIGHT DUTY ALLOWANCE"
+                android:textAppearance="?attr/textAppearanceLabelLarge"
+                android:textColor="#1a237e"
+                android:background="#e8eaf6"
+                android:padding="10dp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <!-- Night Duty Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardNightDuty"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="80dp" android:clickable="true" android:focusable="true"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="48dp" android:layout_height="48dp"
+                        app:cardBackgroundColor="#e8eaf6" app:cardCornerRadius="12dp" app:cardElevation="0dp">
+                        <TextView android:layout_width="match_parent" android:layout_height="match_parent"
+                            android:gravity="center" android:text="🌙" android:textSize="22sp"/>
+                    </com.google.android.material.card.MaterialCardView>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="Night Duty Allowance" android:textAppearance="?attr/textAppearanceTitleSmall"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="Add entries and export night duty bill"
+                            android:textAppearance="?attr/textAppearanceBodySmall"
+                            android:textColor="?attr/colorOnSurfaceVariant"/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                        android:src="@drawable/ic_arrow_forward" app:tint="?attr/colorOnSurfaceVariant"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSettings"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" android:layout_margin="16dp"
+        android:contentDescription="Settings" android:src="@drawable/ic_settings"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

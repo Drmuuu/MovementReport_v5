@@ -1,0 +1,5 @@
+-keep class com.railway.movementreport.data.entity.** { *; }
+-keep class com.itextpdf.** { *; }
+-dontwarn com.itextpdf.**
+-dontwarn org.bouncycastle.**
+-keep class org.bouncycastle.** { *; }
