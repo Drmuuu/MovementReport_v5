@@ -67,7 +67,6 @@ class HomeActivity : AppCompatActivity() {
             .setTitle("About Movement Report App")
             .setMessage(
                 "Movement Report\nVersion 5.0\n\n" +
-                "Developed by\nVinayak Chakraborty\n\n" +
                 "───────────────────────\n\n" +
                 "Features:\n\n" +
                 "• Add Duty entries with train number and stations\n\n" +
@@ -81,6 +80,12 @@ class HomeActivity : AppCompatActivity() {
                 "• Edit your profile from Settings\n\n" +
                 "────────────────────────\n\n" +
                 "🔒 100% Offline & Private\n\n" +
+                "Developed by\nVinayak Chakraborty\n\n" +
+                "© 2026 Vinayak Chakraborty\n" +
+                "All Rights Reserved\n\n" +
+                "You are free to use this application for personal and official purposes.\n\n" +
+                "However, removal of author credits, claiming authorship, redistribution under another name, or modification and redistribution without proper attribution is strictly prohibited.\n\n" +
+                "Unauthorized use without giving credit to the original author is prohibited.\n\n" +
                 "All data is stored locally on your device only. No internet required."
             )
             .setPositiveButton("OK", null).show()
