@@ -249,7 +249,7 @@ class PdfGenerator(private val context: Context) {
             val clCount    = allEntries.count { it.remarks == "CL" }
             val lapCount   = allEntries.count { it.remarks == "LAP" }
             val sickCount  = allEntries.count { it.remarks == "SICK" }
-            val splCount   = allEntries.count { it.remarks == "SPL" }
+            val sclCount   = allEntries.count { it.remarks == "SCL" }
             val odCount    = allEntries.count { it.remarks == "OD" }
 
             // All 6 always shown — serial order
@@ -260,7 +260,7 @@ class PdfGenerator(private val context: Context) {
                 "CL"     to clCount,
                 "LAP"    to lapCount,
                 "SICK"   to sickCount,
-                "SPL"    to splCount,
+                "SCL"    to sclCount,
                 "OD"     to odCount
             )
             val colCount = summaryItems.size  // always 6
