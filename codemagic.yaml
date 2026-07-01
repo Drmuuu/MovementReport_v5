@@ -1,6 +1,6 @@
 workflows:
-  android-debug:
-    name: Android Debug Build
+  android-release:
+    name: Android Release Build
 
     environment:
       java: 17
@@ -8,7 +8,7 @@ workflows:
     scripts:
       - perl -pi -e 's/\r\n/\n/g' gradlew
       - chmod +x gradlew
-      - ./gradlew assembleDebug
+      - ./gradlew assembleRelease
 
     artifacts:
-      - app/build/outputs/apk/debug/*.apk
+      - app/build/outputs/apk/release/*.apk
