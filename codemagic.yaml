@@ -5,10 +5,13 @@ workflows:
     environment:
       java: 17
 
+      android_signing:
+        - movementreport_keystore
+
     scripts:
       - perl -pi -e 's/\r\n/\n/g' gradlew
       - chmod +x gradlew
       - ./gradlew assembleRelease
 
     artifacts:
-      - app/build/outputs/apk/release/*.apk
+      - app/build/outputs/**/*.apk
